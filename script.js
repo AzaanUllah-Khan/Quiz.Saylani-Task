@@ -103,6 +103,7 @@ var questions = [
 
 // Get HTML elements
 var questionNumber = document.getElementById('questionNumber');
+var questionNumberup = document.getElementById('noOfQuestions');
 var quest = document.getElementById('quest');
 var ans1 = document.getElementById('ans1');
 var ans2 = document.getElementById('ans2');
@@ -121,6 +122,7 @@ var score = 0;
 function loadQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
   questionNumber.textContent = "Que " + (currentQuestionIndex + 1);
+  questionNumberup.textContent = currentQuestionIndex + 1;
   quest.textContent = currentQuestion.question;
   ans1.textContent = currentQuestion.options[0];
   ans2.textContent = currentQuestion.options[1];
