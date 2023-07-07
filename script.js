@@ -1,106 +1,206 @@
-var questions = [
-  {
-    question: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "Hyperlinks and Text Markup Language",
-      "Home Tool Markup Language",
-      "None of the above"
-    ],
-    answer: 0
-  },
-  {
-    question: "What is the correct HTML element for the largest heading?",
-    options: [
-      "<h6>",
-      "<h1>",
-      "<heading>",
-      "<head>"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which tag is used to create an unordered list in HTML?",
-    options: [
-      "<ol>",
-      "<li>",
-      "<list>",
-      "<ul>"
-    ],
-    answer: 3
-  },
-  {
-    question: "Which attribute is used to specify the URL of an external script file in HTML?",
-    options: [
-      "href",
-      "src",
-      "link",
-      "script"
-    ],
-    answer: 1
-  },
-  {
-    question: "What is the correct HTML element for inserting a line break?",
-    options: [
-      "<lb>",
-      "<break>",
-      "<br>",
-      "<line>"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which attribute is used to define inline styles in HTML?",
-    options: [
-      "style",
-      "class",
-      "id",
-      "font"
-    ],
-    answer: 0
-  },
-  {
-    question: "Which tag is used to define an image in HTML?",
-    options: [
-      "<picture>",
-      "<img>",
-      "<photo>",
-      "<image>"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which tag is used to create a hyperlink in HTML?",
-    options: [
-      "<a>",
-      "<link>",
-      "<href>",
-      "<hyperlink>"
-    ],
-    answer: 0
-  },
-  {
-    question: "What is the correct HTML element for playing video files?",
-    options: [
-      "<media>",
-      "<movie>",
-      "<video>",
-      "<play>"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which tag is used to define a table in HTML?",
-    options: [
-      "<td>",
-      "<tab>",
-      "<tr>",
-      "<table>"
-    ],
-    answer: 3
-  }
-];
+// var questions = [
+  // {
+  //   question: "What does HTML stand for?",
+  //   options: [
+  //     "Hyper Text Markup Language",
+  //     "Hyperlinks and Text Markup Language",
+  //     "Home Tool Markup Language",
+  //     "None of the above"
+  //   ],
+  //   answer: 0
+  // },
+  // {
+  //   question: "What is the correct HTML element for the largest heading?",
+  //   options: [
+  //     "<h6>",
+  //     "<h1>",
+  //     "<heading>",
+  //     "<head>"
+  //   ],
+  //   answer: 1
+  // },
+  // {
+  //   question: "Which tag is used to create an unordered list in HTML?",
+  //   options: [
+  //     "<ol>",
+  //     "<li>",
+  //     "<list>",
+  //     "<ul>"
+  //   ],
+  //   answer: 3
+  // },
+  // {
+  //   question: "Which attribute is used to specify the URL of an external script file in HTML?",
+  //   options: [
+  //     "href",
+  //     "src",
+  //     "link",
+  //     "script"
+  //   ],
+  //   answer: 1
+  // },
+  // {
+  //   question: "What is the correct HTML element for inserting a line break?",
+  //   options: [
+  //     "<lb>",
+  //     "<break>",
+  //     "<br>",
+  //     "<line>"
+  //   ],
+  //   answer: 2
+  // },
+  // {
+  //   question: "Which attribute is used to define inline styles in HTML?",
+  //   options: [
+  //     "style",
+  //     "class",
+  //     "id",
+  //     "font"
+  //   ],
+  //   answer: 0
+  // },
+  // {
+  //   question: "Which tag is used to define an image in HTML?",
+  //   options: [
+  //     "<picture>",
+  //     "<img>",
+  //     "<photo>",
+  //     "<image>"
+  //   ],
+  //   answer: 1
+  // },
+  // {
+  //   question: "Which tag is used to create a hyperlink in HTML?",
+  //   options: [
+  //     "<a>",
+  //     "<link>",
+  //     "<href>",
+  //     "<hyperlink>"
+  //   ],
+  //   answer: 0
+  // },
+  // {
+  //   question: "What is the correct HTML element for playing video files?",
+  //   options: [
+  //     "<media>",
+  //     "<movie>",
+  //     "<video>",
+  //     "<play>"
+  //   ],
+  //   answer: 2
+  // },
+  // {
+  //   question: "Which tag is used to define a table in HTML?",
+  //   options: [
+  //     "<td>",
+  //     "<tab>",
+  //     "<tr>",
+  //     "<table>"
+  //   ],
+  //   answer: 3
+  // }
+// ];
 
+var questions = JSON.parse(localStorage.getItem("test")) || [{
+  question: "What does HTML stand for?",
+  options: [
+    "Hyper Text Markup Language",
+    "Hyperlinks and Text Markup Language",
+    "Home Tool Markup Language",
+    "None of the above"
+  ],
+  answer: 0
+},
+{
+  question: "What is the correct HTML element for the largest heading?",
+  options: [
+    "<h6>",
+    "<h1>",
+    "<heading>",
+    "<head>"
+  ],
+  answer: 1
+},
+{
+  question: "Which tag is used to create an unordered list in HTML?",
+  options: [
+    "<ol>",
+    "<li>",
+    "<list>",
+    "<ul>"
+  ],
+  answer: 3
+},
+{
+  question: "Which attribute is used to specify the URL of an external script file in HTML?",
+  options: [
+    "href",
+    "src",
+    "link",
+    "script"
+  ],
+  answer: 1
+},
+{
+  question: "What is the correct HTML element for inserting a line break?",
+  options: [
+    "<lb>",
+    "<break>",
+    "<br>",
+    "<line>"
+  ],
+  answer: 2
+},
+{
+  question: "Which attribute is used to define inline styles in HTML?",
+  options: [
+    "style",
+    "class",
+    "id",
+    "font"
+  ],
+  answer: 0
+},
+{
+  question: "Which tag is used to define an image in HTML?",
+  options: [
+    "<picture>",
+    "<img>",
+    "<photo>",
+    "<image>"
+  ],
+  answer: 1
+},
+{
+  question: "Which tag is used to create a hyperlink in HTML?",
+  options: [
+    "<a>",
+    "<link>",
+    "<href>",
+    "<hyperlink>"
+  ],
+  answer: 0
+},
+{
+  question: "What is the correct HTML element for playing video files?",
+  options: [
+    "<media>",
+    "<movie>",
+    "<video>",
+    "<play>"
+  ],
+  answer: 2
+},
+{
+  question: "Which tag is used to define a table in HTML?",
+  options: [
+    "<td>",
+    "<tab>",
+    "<tr>",
+    "<table>"
+  ],
+  answer: 3
+}];
 // Get HTML elements
 var questionNumber = document.getElementById('questionNumber');
 var questionNumberup = document.getElementById('noOfQuestions');
@@ -200,46 +300,46 @@ radbtns.forEach(function (radio) {
   radio.addEventListener("change", handleRadioChange);
 });
 
-function sign() {
-  let prev = localStorage.getItem("users");
-  let userData = prev ? JSON.parse(prev) : [];
-  var name = document.getElementById("na").value;
-  var email = document.getElementById("em").value;
-  var password = document.getElementById("pass").value;
-  var users = {
-    name: name,
-    email: email,
-    password: password
-  }
-  userData.push(users)
-  console.log(users.name);
-  let stringfy = JSON.stringify(userData)
-  localStorage.setItem("users", stringfy)
+// function sign() {
+//   let prev = localStorage.getItem("users");
+//   let userData = prev ? JSON.parse(prev) : [];
+//   var name = document.getElementById("na").value;
+//   var email = document.getElementById("em").value;
+//   var password = document.getElementById("pass").value;
+//   var users = {
+//     name: name,
+//     email: email,
+//     password: password
+//   }
+//   userData.push(users)
+//   console.log(users.name);
+//   let stringfy = JSON.stringify(userData)
+//   localStorage.setItem("users", stringfy)
 
-  window.location.href = "index.html"
+//   window.location.href = "index.html"
 
-}
+// }
 
-function login() {
-  var flag = false;
-  var email = document.getElementById("em").value;
-  var password = document.getElementById("pass").value;
-  var userName = localStorage.getItem("users");
+// function login() {
+//   var flag = false;
+//   var email = document.getElementById("em").value;
+//   var password = document.getElementById("pass").value;
+//   var userName = localStorage.getItem("users");
 
-  if (userName) {
-    var json = JSON.parse(userName);
-    for (var i = 0; i < json.length; i++) {
-      if (email == json[i].email && password == json[i].password) {
-        flag = true;
-        alert("Welcome!");
-        window.location.href = "quiz.html";
-        break;
-      }
-    }
-  }
+//   if (userName) {
+//     var json = JSON.parse(userName);
+//     for (var i = 0; i < json.length; i++) {
+//       if (email == json[i].email && password == json[i].password) {
+//         flag = true;
+//         alert("Welcome!");
+//         window.location.href = "quiz.html";
+//         break;
+//       }
+//     }
+//   }
 
-  if (!flag) {
-    alert("Account not signed in");
-    window.location.href = "signup.html";
-  }
-}
+//   if (!flag) {
+//     alert("Account not signed in");
+//     window.location.href = "signup.html";
+//   }
+// }

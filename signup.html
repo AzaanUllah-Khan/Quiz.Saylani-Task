@@ -127,6 +127,24 @@
     button:hover {
       box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
     }
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: small;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .left {
+      display: flex;
+    }
+
+    .right a {
+      color: #fff;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -134,24 +152,28 @@
   <div class="main">
     <header>SignUp</header>
     <div class="input-field">
-      <input type="text" id="na" placeholder="Name" class="input">
+      <input type="text" id="name" placeholder="Name" class="input">
       <i class="fa fa-user"></i>
     </div>
     <div class="input-field">
-      <input type="email" id="em" placeholder="Email" class="input">
+      <input type="email" id="email" placeholder="Email" class="input">
       <i class="fa fa-envelope"></i>
     </div>
     <div class="input-field">
-      <input type="password" id="pass" placeholder="Password" class="input">
+      <input type="password" id="password" placeholder="Password" class="input">
       <i class="fa fa-lock"></i>
     </div>
-    <button onclick="sign()">Sign Up</button>
-    <div class="a">
-      <a href="index.html">Log in</a>
+    <button id="btn">Sign Up</button>
+    <div class="bottom">
+      <div class="left">
+        <label id="fP">Forgot Password</label>
+      </div>
+      <div class="right">
+        <a href="index.html">Dont Have An Account?</a>
+      </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
+  <script type="module" src="signin.js"></script>
 </body>
 
 </html>

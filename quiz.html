@@ -17,9 +17,8 @@
 </head>
 
 <body>
-    <button class="button" onclick="document.getElementById('main').style.display = 'block';
-    this.style.display = 'none'">Start Quiz</button>
-    <div class="mcqContainer" id="main">
+    <button class="button" id="strtBtn">Start Quiz</button>
+    <div class="mcqContainer" id="main" style="display: none;">
         <div class="header">
             <div class="h1">
                 <h1>HTML QUIZ</h1>
@@ -80,6 +79,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script type="module" src="quiz.js"></script>
 </body>
 
 </html>

@@ -116,7 +116,7 @@
     }
 
     .submit:hover {
-      box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.09);
     }
 
     .bottom {
@@ -147,15 +147,15 @@
         <header>Login</header>
       </div>
       <div class="input-field">
-        <input type="text" class="input" placeholder="Email" required id="em">
+        <input type="text" class="input" placeholder="Email" required id="email">
         <i class="fa fa-envelope"></i>
       </div>
       <div class="input-field">
-        <input type="password" class="input" placeholder="Password" required id="pass">
+        <input type="password" class="input" placeholder="Password" required id="password">
         <i class="fa-solid fa-lock"></i>
       </div>
       <div class="input-field">
-        <input type="submit" class="submit" value="Login" onclick="login()" required>
+        <input type="submit" class="submit" value="Login" id="login" required>
       </div>
       <div class="bottom">
         <div class="left">
@@ -163,12 +163,12 @@
           <label for="check">Remember Me</label>
         </div>
         <div class="right">
-          <a href="signup.html">Dont Have An Account?</a>
+          <a href="signup.html">Already Have An Account?</a>
         </div>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script type="module" src="login.js"></script>
 </body>
 
 </html>
