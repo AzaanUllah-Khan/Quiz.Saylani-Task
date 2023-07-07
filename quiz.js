@@ -25,7 +25,7 @@ Btn.addEventListener("click", () => {
                 sendEmailVerification(auth.currentUser)
                     .then(() => {
                         // Email verification sent!
-                        alert("Email Sent");
+                        alert("Verify Your Email First, Make Sure to reload the page after verifying your email");
                         // ...
                     });
             }
